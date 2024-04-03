@@ -1,4 +1,3 @@
-
 <html>
   <head>
     <script
@@ -7,22 +6,23 @@
       crossorigin="anonymous"
     ></script>
     <script>
-            $(function(){
-                $('#button').on('click', function() {
-                    $.ajax({
-                        url:"?",
-                        type: 'GET',
-                        data: {'showall':1}
-                        }).done(function(response) {
-                            if(response.state)
-                            {
-                                $('#content'.html(response.content));
-                            }
-                          }
+      $(function () {
+        $("#button").on("click", function () {
+          $.ajax({
+            url: "?",
+            type: "GET",
+            data: { showall: 1 },
+          }).done(
+            function (response) {
+              if (response.state) {
+                $("#content".html(response.content));
+              }
+            },
 
-      {});
-                    });
-            });
+            {}
+          );
+        });
+      });
     </script>
   </head>
   <body>
