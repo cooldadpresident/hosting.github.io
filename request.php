@@ -8,11 +8,11 @@
 
     <script>
       $(function () {
-        $("#button").on("click", function () {
+        $('#button').on('click', function () {
           $.ajax({
             url: "?",
             type: "GET",
-            data: { showall: 1 },
+            data: { "showall": 1 },
           }).done(
             function (response) {
               if (response.state) {
