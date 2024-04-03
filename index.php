@@ -1,7 +1,13 @@
-<php>
-  if(isset($_GET['showall']) && $GET['showall'] == 1){ echo json_encode( [
-  'state' = 1, 'content' => '<b>Ahoj</b>' ] ) }
-</php>
+<?php
+if(isset($_GET['showall']) && $_GET['showall'] == 1){
+    header('application/json: utf-8', true, 200);
+    echo json_encode(
+        [
+'state' = 1, 'content' =>
+'<b>Ahoj</b>' ] ); exit;
+
+}
+?>
 <html>
   <head>
     <script
